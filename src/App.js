@@ -37,15 +37,22 @@ function App() {
       </header>
       <div className="class">
 
-        <table border="5px, dashed">
+        <table>
           <tr>
+            <td>tic</td>
+            <td>tac</td>
+            <td>toe</td>
+          </tr>
+          <tr>
+            <td>tic</td>
+            <td>tac</td>
+            <td>toe</td>
+          </tr>
+          <tr>
+            <td>sd</td>
+            <td>df</td>
             <td>df</td>
           </tr>
-          <tr>
-            <td>td</td>
-            <td>td</td>
-          </tr>
-          <tr><td>sd</td></tr>
         </table>
 
       </div>
