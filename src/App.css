@@ -1,47 +1,85 @@
-.App {
-  text-align: center;
+html{
+  background-color:bisque ;
+  
+  margin: 0;
+  padding: 0;
+}
+.all{
+  background-color: bisque;
+}
+.main-text{
+  color: #ECB390;
+  padding: 20px;
+  background-color: #DD4A48;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* The players */
+.input-player{
+  border-radius: 5px 10px 5px 1px;
+  text-align: left;
+  padding: 5px;
+  font-weight: 500;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.player{
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.players{
+  
+  
+  
+  
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+
+/* The game display */
+.game{
+  border: solid 2px solid;
+}
+
+
+
+/* The buttons to choose the games  */
+.buttons{
+  border: solid 2px #30475E;
+  border-radius: 5px 20px 10px 20px;
+  
+}
+
+.buttons button {
+  padding: 10px 20px;
   color: white;
+  margin: 20px;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #F05454 50%, white 50%);
+  -webkit-transition: background-position 1s;
+  -moz-transition: background-position 1s;
+  transition: background-position 1s;
+  transition: .5s;
+  border-radius: 5px 20px 10px 20px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.buttons button:hover {
+  color: black;
+  background-position: 0 -100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-table{
-  border: 3px solid black;
-}
 
-td{
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-}
+
+
+
+
+
+
+
+
+
+
