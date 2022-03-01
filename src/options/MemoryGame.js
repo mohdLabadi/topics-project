@@ -1,17 +1,22 @@
 import "./memoryGame.css";
 
+
 function MemoryGame() {
   return (
 
     <html>
      
       <body>
+        <div class="container">
         <h1 class="page-title"> Memory Game</h1>
         <div class="game-container">
+
           <div class="game-info-container">
+
             <div class="game-info">
-              Time <span id="time">100</span>
+              Time: <span id="time">100</span>
             </div>
+
           </div>
 
           <div class="card visible">
@@ -77,6 +82,8 @@ function MemoryGame() {
           <div class="card">
             <div class="card-back"></div>
           </div>
+
+        </div>
         </div>
       </body>
     </html>

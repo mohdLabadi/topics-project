@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 *{
     box-sizing:border-box;
 }
@@ -6,6 +9,7 @@ html{
     min-height:100vh;
 
 }
+
 body{
     margin:0;
     background: radial-gradient(rgb(122,99,255),rgba(32, 0, 215));
@@ -18,7 +22,7 @@ body{
     font-family: "Audiowide", sans-serif;
     text-align:center;
     font-size: 6em;
-    border-radius: 5px 20px 10px 20px;
+    border-radius: 14px, 14px, 14px, 14px;
     margin-top: 50px;
     margin: 20px;
 }
@@ -31,18 +35,20 @@ body{
 .game-info{
     font-family: "Audiowide", sans-serif;
     color: rgb(220,220,220);
+    font-size:3em;
 }
-.game-contianer{
+.game-container {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap:10px;
-    margin: 50px;
+    margin:20px;
     justify-content: center;
 }
 .card{
     background-color: purple;
     height: 175px;
     width:125px;
+    margin:10px;
 }
 
 .card-face{
