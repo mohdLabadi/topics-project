@@ -8,15 +8,19 @@ html{
 }
 body{
     margin:0;
-    background: radial-gradient(rgb(122,99,255),rgb(32,0,215))
-    
+    background: radial-gradient(rgb(122,99,255),rgba(32, 0, 215));
+    border-radius: 10px;
 }
 
 .page-title{
-    color: rgb(30,30,30);
+    background-color:blueviolet;
+    color: white;
     font-family: "Audiowide", sans-serif;
     text-align:center;
     font-size: 6em;
+    border-radius: 5px 20px 10px 20px;
+    margin-top: 50px;
+    margin: 20px;
 }
 
 .game-info-container{
@@ -36,12 +40,10 @@ body{
     justify-content: center;
 }
 .card{
-    background-color: black;
+    background-color: purple;
     height: 175px;
     width:125px;
 }
-
-
 
 .card-face{
     position: absolute;
