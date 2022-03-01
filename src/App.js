@@ -1,13 +1,12 @@
 import "./App.css";
 import { useState } from "react";
 import Hangman from "./options/Hangman";
-import Memory from "./options/memoryCard";
-import MemoryGame from "./options/MemoryGame";
 
+import MemoryGame from "./options/MemoryGame";
 
 function App() {
   //input and finalized first and last names
-  const [secondName, setSecondName] = useState();
+
   const [firstName, setFirstName] = useState();
 
   //what to display
@@ -19,47 +18,23 @@ function App() {
   let game;
 
   if (display == "logo") {
-    game = (
-      <img
-        src="./Yal3ab.png"
-        alt="Logo"
-        className="img-fluid game"
-      />
-    );
+    game = <img src="./Yal3ab.png" alt="Logo" className="img-fluid game" />;
   } else if (display == "game-1") {
     game = (
       <Hangman
         scoreOne={oneScore}
-        scoreTwo={twoScore}
         changeFirst={setOneScore}
-        changeSecond={setTwoScore}
         first={firstName}
-        second={secondName}
       ></Hangman>
     );
-  } else if (display == "game-2") {
+  } else if (display == "game-3") {
     game = (
-      <Memory
+      <MemoryGame
         fscoreOne={oneScore}
-        scoreTwo={twoScore}
         changeFirst={setOneScore}
-        changeSecond={setTwoScore}
         first={firstName}
-        second={secondName}
-      ></Memory>
+      ></MemoryGame>
     );
-  }
-    else if (display == "game-3") {
-      game = (
-        <MemoryGame
-          fscoreOne={oneScore}
-          scoreTwo={twoScore}
-          changeFirst={setOneScore}
-          changeSecond={setTwoScore}
-          first={firstName}
-          second={secondName}
-        ></MemoryGame>
-      );
   }
 
   return (
@@ -79,24 +54,11 @@ function App() {
             />
             <h4>Score: {oneScore}</h4>
           </div>
-          <div className="player"></div>
-
-          <h4>Player 2</h4>
-          <input
-            className="input-player"
-            type="text"
-            value={secondName}
-            onChange={(e) => {
-              setSecondName(e.target.value);
-            }}
-          />
-          <h4>Score: {twoScore}</h4>
         </div>
         <div className="col-lg-8 game">{game}</div>
 
         <div className="col-lg-2 ">
           <div className="buttons">
-
             <button
               onClick={() => {
                 setDisplay("game-1");
@@ -107,25 +69,15 @@ function App() {
 
             <button
               onClick={() => {
-                setDisplay("game-2");
-              }}
-            >
-              Tic Tac Toe
-            </button>
-
-            <button
-              onClick={() => {
                 setDisplay("game-3");
               }}
             >
               Memory Game
             </button>
-
           </div>
         </div>
       </div>
     </div>
-       
   );
 }
 
