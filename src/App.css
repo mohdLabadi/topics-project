@@ -1,19 +1,82 @@
-.App {
-  text-align: center;
+html{
+  background-color:bisque ;
+  margin: 0;
+  padding: 0;
 }
-
-
-.btn{
-  margin:20px !important;
-}
-
-h1{
-  margin-top:20px !important;
-  margin-bottom:20px !important;
-  padding:10px;
-  border:10px;
+.all{
   background-color: bisque;
 }
-table,td{
-  border:3px black solid !important;
+.main-text{
+  color: #ECB390;
+  padding: 20px;
+  background-color: #DD4A48;
+  
 }
+
+/* The players */
+.input-player{
+  border-radius: 5px 10px 5px 1px;
+  text-align: left;
+  padding: 1px;
+  font-weight: 500;
+
+  
+}
+
+.player{
+  margin-bottom: 20px;
+  padding-right: 10px;
+ 
+}
+
+.players{
+  flex-direction: column;
+
+}
+
+
+
+/* The game display */
+.game{
+  border: solid 2px solid;
+}
+
+
+
+/* The buttons to choose the games  */
+.buttons{
+  border: solid 2px #30475E;
+  border-radius: 5px 20px 10px 20px;
+  
+}
+
+.buttons button {
+  padding: 10px 20px;
+  color: white;
+  margin: 20px;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #F05454 50%, white 50%);
+  -webkit-transition: background-position 1s;
+  -moz-transition: background-position 1s;
+  transition: background-position 1s;
+  transition: .5s;
+  border-radius: 5px 20px 10px 20px;
+}
+
+.buttons button:hover {
+  color: black;
+  background-position: 0 -100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
