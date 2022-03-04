@@ -1,10 +1,14 @@
-
+import "./Home.css";
 
 function HomePage(){
 
     return(
-        <div className="container">
-            <h1>Hello</h1>
+        <div className="container-fluid all-home">
+            <div className="row">
+                
+
+            </div>
+            
         </div>
     )
 
