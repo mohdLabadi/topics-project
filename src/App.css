@@ -1,4 +1,4 @@
-/* html{
+ html{
   background-color:bisque ;
   margin: 0;
   padding: 0;
@@ -30,14 +30,9 @@ a{
 
 
 /* The Icons  */
-/* .icon-bar{
+ .icon-bar{
   position: fixed;
   top: 30%;
-}
-#game-2s{
-  
-  background-color: aqua;
-  color: black;
 }
 
 .icon{
@@ -64,6 +59,39 @@ a{
   opacity: 1;
 }
 
+.icon .text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.icon .text .ic{
+ font-size: large;
+}
+.icon .text #game{
+  transform: translateX(-8px);
+}
+.icon .text #home{
+  transform: translateX(5px);
+}
+.icon .text #about-us{
+  transform: translateX(5px);
+}
+
+#show-games{
+  padding: 16px 0 16px 0;
+}
+.icon .all-games p{
+  margin: 0;
+  padding: 10px;
+  transition: 0.4s;
+}
+.icon .all-games p:hover{
+  color:  azure;
+  text-shadow: #DD4A48;
+  background-color: #ECB390;
+ 
+  text-shadow: 4px 4px 0px rgba(163, 163, 163, 0.36);
+}
 
 .all-games{
   transition: 1s;
@@ -71,10 +99,10 @@ a{
 
 
 /* The game display */
-/* .game{
+ .game{
   border: solid 2px solid;
   width: 90%; 
-} */ */ */
+} 
 
 .App {
   max-width: 860px;

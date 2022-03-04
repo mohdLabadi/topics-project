@@ -3,12 +3,12 @@ import './MemoryGame2.css';
 import SingleCard from "./SingleCard";
 
 const cardImages = [
-   { src: './options/Labadi1 - Copy.jpg', matched: false },
-   { src: '/img/potion-1.png', matched: false },
-   { src: '/img/ring-1.png', matched: false },
-   { src: '/img/scroll-1.png', matched: false },
-   { src: '/img/shield-1.png', matched: false },
-   { src: '/img/sword-1.png', matched: false },
+   { "src": './img/elephant.png', matched: false },
+   { "src": './img/cat.png', matched: false },
+   { "src": './img/dog.png', matched: false },
+   { "src": './img/goat.png', matched: false },
+   { "src": './img/rabbit.png', matched: false },
+   { "src": './img/horse.png', matched: false },
 ];
 
 function MemoryGame2() {
@@ -17,10 +17,6 @@ function MemoryGame2() {
    const [choiceOne, setChoiceOne] = useState(null);
    const [choiceTwo, setChoiceTwo] = useState(null);
    const [disabled, setDisabled] = useState(false);
-
-   /*  console.log(`C1 : `, choiceOne);
-   console.log(`C2 : `, choiceTwo);
-   console.log(turns); */
 
    // shuffle cards
    const shuffleCard = () => {

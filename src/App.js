@@ -1,11 +1,13 @@
 import "./App.css";
 import { useState } from "react";
-import Hangman from "./options/Hangman";
-import MemoryGame2 from "./options/MemoryGame2";
+import Hangman from "./Hangman";
+import MemoryGame2 from "./MemoryGame2";
+import { FaHome, FaGamepad,FaHeadset } from "react-icons/fa";
 
 function App() {
   //input first and last names
   const [firstName, setFirstName] = useState();
+  
   //finalized last names
   const [finalizedName, setFinalizedName] = useState("Player");
 
@@ -24,6 +26,7 @@ function App() {
     allgames = (
       <div className="all-games">
         <p>Memory Game</p>
+
         <p>Hangman</p>
       </div>
     );
@@ -66,7 +69,12 @@ function App() {
       <nav className="navbar ">
         <div className="container-fluid">
           <div className="navbar-header">
-            <h3 className="navbar-brand">NoobyLoob and Llabadi Games</h3>
+            <h3 className="navbar-brand">
+              <a >
+                <img href="/img/Yal3ab.png">
+                </img>
+              </a>
+              NoobyLoob and Llabadi Games</h3>
           </div>
           <ul className="navbar navbar-nav navbar-right">
             <li>This is for the very long list of names </li>
@@ -87,24 +95,34 @@ function App() {
 
       {/* There will be the scores here */}
       <div className="icon-bar">
-        <div className="icon" id="game-2s">
-          <h5>score: {oneScore}</h5>
+        <div className="icon">
+          <div className="text">
+            <h5>Contact us </h5> <FaHeadset size={25} className="ic" id="about-us"></FaHeadset>
+          </div>
         </div>
         <div className="icon">
-          <h5>About Us</h5>
+          <div className="text">
+            <h5>Home </h5> <FaHome size={25} className="ic" id="home"></FaHome>
+          </div>
         </div>
-        <div className="icon "onMouseEnter={(e) => {
-              toggleAllGames();
-            }}
-            onMouseLeave={(e) => {
-              toggleAllGames();
-            }}>
-          <h5
-            
-          >
-            All games
-          </h5>
-          {allgames}
+
+        <div
+          className="icon"
+          id="show-games"
+          onMouseEnter={(e) => {
+            toggleAllGames();
+          }}
+          onMouseLeave={(e) => {
+            toggleAllGames();
+          }}
+        >
+          <div className="text">
+            <div className="contain">
+              <h5> Games</h5>
+              {allgames}
+            </div>
+            <FaGamepad size={30} className="ic" id="game"></FaGamepad>
+          </div>
         </div>
       </div>
     </div>
