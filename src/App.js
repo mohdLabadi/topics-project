@@ -1,13 +1,15 @@
 import "./App.css";
 import { useState } from "react";
-import Hangman from "./options/Hangman";
+import MemoryGame2 from "./MemoryGame2";
+import Hangman from "./Hangman";
 import { FaHome, FaGamepad, FaHeadset } from "react-icons/fa";
-import MemoryGame from "./options/MemoryGame";
-import HomePage from "./options/Home";
+
+import HomePage from "./Home";
 
 function App() {
   //input first and last names
   const [firstName, setFirstName] = useState();
+  
   //finalized last names
   const [finalizedName, setFinalizedName] = useState("Player");
 
@@ -70,11 +72,11 @@ function App() {
     );
   } else if (display == "memory-game") {
     game = (
-      <MemoryGame
+      <MemoryGame2
         fscoreOne={oneScore}
         changeFirst={setOneScore}
         first={firstName}
-      ></MemoryGame>
+      ></MemoryGame2>
     );
   }
 
@@ -83,12 +85,17 @@ function App() {
       <nav className="navbar ">
         <div className="container-fluid">
           <div className="navbar-header">
-            <h3 className="navbar-brand">NoobyLoob and Llabadi Games</h3>
-          </div>
+            <h3 className="navbar-brand">
+              <a href="#">
+                <img src="./img/Yal3ab.png">
+                </img>
+              </a>
+              NoobyLoob and Llabadi Games</h3>
+          
           <ul className="navbar navbar-nav navbar-right">
-            <li>This is for the very long list of names </li>
-            <li>Score : {oneScore}</li>
+            <li>Score : {oneScore} </li>
           </ul>
+          </div>
         </div>
       </nav>
       {/* The main content with container fluid */}
