@@ -73,6 +73,11 @@ a{
 .icon .text #game{
   transform: translateX(-8px);
 }
+.icon .text .home-text{
+
+  transform: translateX(20px);
+  
+}
 .icon .text #home{
   transform: translateX(5px);
 }
