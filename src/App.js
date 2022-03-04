@@ -70,8 +70,8 @@ function App() {
         <div className="container-fluid">
           <div className="navbar-header">
             <h3 className="navbar-brand">
-              <a >
-                <img href="/img/Yal3ab.png">
+              <a href="#">
+                <img src="./img/Yal3ab.png">
                 </img>
               </a>
               NoobyLoob and Llabadi Games</h3>
