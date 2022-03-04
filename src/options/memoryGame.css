@@ -44,95 +44,79 @@ body{
     justify-content: center;
     perspective: 500px; /* I dont know what does this mean */
 }
-.card{
-    background-color: purple;
+.card {
+    position: relative;
     height: 175px;
-    width:125px;
-    margin:10px;
-}
+    width: 125px;
+  }
+  
+.card-face {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            border-width: 1px;
+            border-style: solid;
+            overflow: hidden;
+            transition: transform 500ms ease-in-out;
+            backface-visibility: hidden;
+  }
+  
+  .card.visible .card-back {
+    transform: rotateY(-180deg); 
+  }
+  
+  .card.visible .card-front {
+    transform: rotateY(0); 
+  }
+  
+  .card.matched .card-front .card-value {
+    animation: dance 1s linear infinite 500ms;
+  }
+  
+  .card-back {
+    background-color: black;
+    border-color: green;
+    transform: rotateY(0); 
+  }
 
-.card-face{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    border: 1px solid;
-    transition: transform 500ms ease-in-out;
-}
-.card.visible .card-back{
-    transform: rotateY(-180deg);
-}   
-
-.card.visible .card-front{
-    transform: rotateY(0);
-}
-
-.card-matched .card-value{
-    animation: rotateX(60);
-}
-
-.card-back{
-    background-color: red;
-    border-color:black
-}
-
-.card-front{
-    background-color: green;
-    border-color:black;
-    transform: rotateX(180deg);
-}
-
-.card-value{
-    transition: transform 100ms ease-in-out;
-    transform: scale(0.9);
-}
-
-
-.card-front:hover .card-value{
-    transform: scale(1);
-}
-
-.card-front:hover{
-    transform: scale(1.1);
-}
-
-.overlay-text{
-    position: fixed;
+.overlay-text {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
+    z-index: 100;
+    display: none;
+    position: fixed;
     justify-content: center;
     align-items: center;
-    z-index: 100;
-    color:rgb(0, 215, 54);
-    font-family: serif;
-
-}
-
-.overlay-text-small.visible{
-    font-size: 0.3em;
-}
-.overlay-text.visible{
+    flex-direction: column;
+    color:purple;
+    font-family: Creepy, serif;
+    transition: background-color 500ms, font-size 500ms;
+  }
+  
+  .overlay-text-small {
+    font-size: .3em;
+  }
+  
+  .overlay-text.visible {
     display: flex;
     animation: overlay-grow 500ms forwards;
-}
+  }
 
-@keyframes overlay-grow{
-    from{
-        background-color: rgba(0,0,0,0);
-        font-size: 0 ;
-        
+
+@media (max-width: 600px){
+    .game-container{
+        grid-template-columns: repeat(2, auto);
     }
-    to{
-        background-color: rgba(0,0,0,0.8);
-        font-size: 8em;
+
+    .game-info-container{
+        flex-direction: column;
+        align-items: center;
     }
 }
 

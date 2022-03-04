@@ -1,8 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Hangman from "./options/Hangman";
-import { GiCardRandom } from "react-icons/gi";
-import MemoryGame from "./options/MemoryGame";
+import MemoryGame2 from "./options/MemoryGame2";
 
 function App() {
   //input first and last names
@@ -19,37 +18,30 @@ function App() {
   const [games, setGames] = useState(false);
 
   let game;
-  let allgames ="";
+  let allgames = "";
 
- 
- if(games == true){
-  allgames = (
-    <div className="all-games">
-      <p>Memory Game</p>
-      <p>Hangman</p>
-    </div>
-  );
- }
- else if(games == false){
-   allgames = "";
- }
- function toggleAllGames(){
-   setGames(!games);
- }
-
-
-
-
-
+  if (games == true) {
+    allgames = (
+      <div className="all-games">
+        <p>Memory Game</p>
+        <p>Hangman</p>
+      </div>
+    );
+  } else if (games == false) {
+    allgames = "";
+  }
+  function toggleAllGames() {
+    setGames(!games);
+  }
 
   if (display == "logo") {
     //game = <img src="./Yal3ab.png" alt="Logo" className="img-fluid game" />;
     game = (
-      <MemoryGame
+      <MemoryGame2
         fscoreOne={oneScore}
         changeFirst={setOneScore}
         first={firstName}
-      ></MemoryGame>
+      ></MemoryGame2>
     );
   } else if (display == "game-1") {
     game = (
@@ -61,11 +53,11 @@ function App() {
     );
   } else if (display == "game-3") {
     game = (
-      <MemoryGame
+      <MemoryGame2
         fscoreOne={oneScore}
         changeFirst={setOneScore}
         first={firstName}
-      ></MemoryGame>
+      ></MemoryGame2>
     );
   }
 
@@ -101,10 +93,17 @@ function App() {
         <div className="icon">
           <h5>About Us</h5>
         </div>
-        <div className="icon">
-          <h5 onClick={(e) => {
-            toggleAllGames();
-          }}>All games</h5>
+        <div className="icon "onMouseEnter={(e) => {
+              toggleAllGames();
+            }}
+            onMouseLeave={(e) => {
+              toggleAllGames();
+            }}>
+          <h5
+            
+          >
+            All games
+          </h5>
           {allgames}
         </div>
       </div>
