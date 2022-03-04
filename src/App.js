@@ -1,8 +1,10 @@
 import "./App.css";
 import { useState } from "react";
-import Hangman from "./Hangman";
 import MemoryGame2 from "./MemoryGame2";
-import { FaHome, FaGamepad,FaHeadset } from "react-icons/fa";
+import Hangman from "./Hangman";
+import { FaHome, FaGamepad, FaHeadset } from "react-icons/fa";
+
+import HomePage from "./Home";
 
 function App() {
   //input first and last names
@@ -25,11 +27,26 @@ function App() {
   if (games == true) {
     allgames = (
       <div className="all-games">
-        <p>Memory Game</p>
+        <p
+          onClick={(e) => {
+            setDisplay("memory-game");
+          }}
+        >
+          Memory Game
+        </p>
 
-        <p>Hangman</p>
+        <p
+          onClick={(e) => {
+            setDisplay("hangman");
+          }}
+        >
+          Hangman
+        </p>
       </div>
     );
+
+
+
   } else if (games == false) {
     allgames = "";
   }
@@ -37,16 +54,15 @@ function App() {
     setGames(!games);
   }
 
-  if (display == "logo") {
-    //game = <img src="./Yal3ab.png" alt="Logo" className="img-fluid game" />;
+  if (display == "home") {
     game = (
-      <MemoryGame2
+      <HomePage
         fscoreOne={oneScore}
         changeFirst={setOneScore}
         first={firstName}
-      ></MemoryGame2>
+      ></HomePage>
     );
-  } else if (display == "game-1") {
+  } else if (display == "hangman") {
     game = (
       <Hangman
         scoreOne={oneScore}
@@ -54,7 +70,7 @@ function App() {
         first={firstName}
       ></Hangman>
     );
-  } else if (display == "game-3") {
+  } else if (display == "memory-game") {
     game = (
       <MemoryGame2
         fscoreOne={oneScore}
@@ -75,19 +91,15 @@ function App() {
                 </img>
               </a>
               NoobyLoob and Llabadi Games</h3>
-          </div>
+          
           <ul className="navbar navbar-nav navbar-right">
-            <li>This is for the very long list of names </li>
-            <li>Score : {oneScore}</li>
+            <li>Score : {oneScore} </li>
           </ul>
+          </div>
         </div>
       </nav>
       {/* The main content with container fluid */}
       <div className="container-fluid  all">
-        {/* <h1 className="Jumbotron row no-gutters text-center  main-text">
-          <div className="col-xs-12">NoobyLoob and LLabadi Games</div>
-        </h1> */}
-
         <div className="row ">
           <div className="col-xs-12  p-20">{game}</div>
         </div>
@@ -97,12 +109,14 @@ function App() {
       <div className="icon-bar">
         <div className="icon">
           <div className="text">
-            <h5>Contact us </h5> <FaHeadset size={25} className="ic" id="about-us"></FaHeadset>
+            <h5>Contact us </h5>{" "}
+            <FaHeadset size={25} className="ic" id="about-us"></FaHeadset>
           </div>
         </div>
         <div className="icon">
           <div className="text">
-            <h5>Home </h5> <FaHome size={25} className="ic" id="home"></FaHome>
+            <h5 id="home-text" onClick={e => {setDisplay("home")}}>Home </h5>{" "}
+            <FaHome size={25} className="ic" id="home"></FaHome>
           </div>
         </div>
 
@@ -117,12 +131,10 @@ function App() {
           }}
         >
           <div className="text">
-            <div className="contain">
-              <h5> Games</h5>
-              {allgames}
-            </div>
+            <h5> Games</h5>
             <FaGamepad size={30} className="ic" id="game"></FaGamepad>
           </div>
+          {allgames}
         </div>
       </div>
     </div>
