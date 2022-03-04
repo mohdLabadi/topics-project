@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Hangman from "./options/Hangman";
-import { GiCardRandom } from "react-icons/gi";
+import { FaHome, FaGamepad,FaHeadset } from "react-icons/fa";
 import MemoryGame from "./options/MemoryGame";
 
 function App() {
@@ -19,28 +19,22 @@ function App() {
   const [games, setGames] = useState(false);
 
   let game;
-  let allgames ="";
+  let allgames = "";
 
- 
- if(games == true){
-  allgames = (
-    <div className="all-games">
-      <p>Memory Game</p>
-      <p>Hangman</p>
-    </div>
-  );
- }
- else if(games == false){
-   allgames = "";
- }
- function toggleAllGames(){
-   setGames(!games);
- }
+  if (games == true) {
+    allgames = (
+      <div className="all-games">
+        <p>Memory Game</p>
 
-
-
-
-
+        <p>Hangman</p>
+      </div>
+    );
+  } else if (games == false) {
+    allgames = "";
+  }
+  function toggleAllGames() {
+    setGames(!games);
+  }
 
   if (display == "logo") {
     //game = <img src="./Yal3ab.png" alt="Logo" className="img-fluid game" />;
@@ -95,17 +89,34 @@ function App() {
 
       {/* There will be the scores here */}
       <div className="icon-bar">
-        <div className="icon" id="game-2s">
-          <h5>score: {oneScore}</h5>
+        <div className="icon">
+          <div className="text">
+            <h5>Contact us </h5> <FaHeadset size={25} className="ic" id="about-us"></FaHeadset>
+          </div>
         </div>
         <div className="icon">
-          <h5>About Us</h5>
+          <div className="text">
+            <h5>Home </h5> <FaHome size={25} className="ic" id="home"></FaHome>
+          </div>
         </div>
-        <div className="icon">
-          <h5 onClick={(e) => {
+
+        <div
+          className="icon"
+          id="show-games"
+          onMouseEnter={(e) => {
             toggleAllGames();
-          }}>All games</h5>
-          {allgames}
+          }}
+          onMouseLeave={(e) => {
+            toggleAllGames();
+          }}
+        >
+          <div className="text">
+            <div className="contain">
+              <h5> Games</h5>
+              {allgames}
+            </div>
+            <FaGamepad size={30} className="ic" id="game"></FaGamepad>
+          </div>
         </div>
       </div>
     </div>
