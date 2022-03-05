@@ -3,10 +3,10 @@
 }
 .main-content {
   padding-top: 20vh;
- 
+  width: 100vw;
   background-color: black;
   color: white;
-  border-radius: 60px 60px 0 0;
+  
 }
 .main-text {
   text-align: center;

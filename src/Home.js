@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <div className="container">
       <div className="row d-flex justify-content-center main-content">
-        <div className="col-sm-6 main-text align-self-center">
+        <div className="">
           <h1>Come and Play Games</h1>
           <p>
             See our two collection of games that Muhamamd Mushoffa and Llabadi.
