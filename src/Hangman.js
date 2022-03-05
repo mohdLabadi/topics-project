@@ -1,3 +1,4 @@
+import "./Hangman.css";
 function Hangman({
   first,
 

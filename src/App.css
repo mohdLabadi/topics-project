@@ -11,17 +11,19 @@ body{
 }
 a{
   text-decoration: none;
-  
 }
+
 *{
   margin: 0;
   padding: 0;
 }
 .all{
-  width: 100%;
   background-color: rgb(35,35,35);
+  width: 100vw;
   margin: 0;
   padding: 0;
+  color: white;
+ 
 }
 .main-text{
   color: #ECB390;
@@ -29,6 +31,7 @@ a{
   background-color: purple;
   
 }
+
 .navbar{
   color: white;
   background-color: purple;

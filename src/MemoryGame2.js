@@ -67,7 +67,7 @@ function MemoryGame2() {
       }
    }, [choiceOne, choiceTwo]);
 
-   console.log(cards);
+
 
    // start the game automatically
    useEffect(() => {
