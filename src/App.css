@@ -5,24 +5,21 @@
 }
 a{
   text-decoration: none;
-  
 }
+
 *{
   margin: 0;
   padding: 0;
 }
 .all{
-  width: 100%;
+  width: 100vw;
   background-color: bisque;
   margin: 0;
   padding: 0;
+  color: white;
+  background-color: #ECB390
 }
-.main-text{
-  color: #ECB390;
-  padding: 20px;
-  background-color: #DD4A48;
-  
-}
+
 .navbar{
   color: white;
   background-color: purple;
