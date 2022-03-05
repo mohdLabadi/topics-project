@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+ 
  html{
-  background-color:bisque ;
+  background-color:rgb(35,35,35) ;
   margin: 0;
   padding: 0;
+}
+body{
+  background-image: "./img/Yal3ab.png";
+  
 }
 a{
   text-decoration: none;
@@ -13,14 +19,14 @@ a{
 }
 .all{
   width: 100%;
-  background-color: bisque;
+  background-color: rgb(35,35,35);
   margin: 0;
   padding: 0;
 }
 .main-text{
   color: #ECB390;
   padding: 20px;
-  background-color: #DD4A48;
+  background-color: purple;
   
 }
 .navbar{
@@ -37,7 +43,7 @@ a{
 
 .icon{
   border-radius: 0px 20px 20px 0;
-  background-color: #DD4A48;
+  background-color: purple;
   color: white;
   padding: 16px;
   margin-top: 20px;
@@ -124,7 +130,7 @@ button {
   font-size: 1em;
 }
 button:hover {
-  background: #c23866;
+  background: purple;
   color: #fff;
 }
 .card-grid {
@@ -135,10 +141,12 @@ button:hover {
 }
 
 a img{
-  width:8%;
-  height:10%;
+  width:15%;
+  height:15%;
   padding: 10px;
 }
+
+
 
 
 

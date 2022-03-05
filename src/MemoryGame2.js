@@ -9,6 +9,8 @@ const cardImages = [
    { "src": './img/goat.png', matched: false },
    { "src": './img/rabbit.png', matched: false },
    { "src": './img/horse.png', matched: false },
+   { "src": './img/duck.png', matched:false},
+   { "src": './img/monkey.png', matched:false}
 ];
 
 function MemoryGame2() {
@@ -46,9 +48,7 @@ function MemoryGame2() {
    useEffect(() => {
       if (choiceOne && choiceTwo) {
          setDisabled(true);
-
-         if (choiceOne.src === choiceTwo.src) {
-            console.log('cards matched');
+         if (choiceOne.src === choiceTwo.src) { 
             setCards((prevCards) => {
                return prevCards.map((card) => {
                   if (card.src === choiceOne.src) {
@@ -60,7 +60,6 @@ function MemoryGame2() {
             });
             resetTurn();
          } else {
-            console.log('cards DONT matched');
             setTimeout(() => {
                resetTurn();
             }, 750);
@@ -77,8 +76,8 @@ function MemoryGame2() {
 
    return (
       <div className="App">
-         <h1>Nimble Memory Match </h1>
-         <h2>Turns : {turns}</h2>
+         <h1>Yal3ab Memory Game </h1>
+         <h2>Flips : {turns}</h2>
 
          <button onClick={shuffleCard}>New Game</button>
          <div className="card-grid">

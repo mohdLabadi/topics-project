@@ -82,22 +82,25 @@ function App() {
 
   return (
     <div className="entire-thing">
-      <nav className="navbar ">
-        <div className="container-fluid">
-          <div className="navbar-header">
-            <h3 className="navbar-brand">
-              <a href="#">
-                <img src="./img/Yal3ab.png">
-                </img>
-              </a>
-              NoobyLoob and Llabadi Games</h3>
+    
+      <nav className="navbar navbar-expand-sm navbar-light ">
+
+        
+          <a className="navbar-brand" href="./Home.js">
+            <img src="./img/Yal3ab.png" width="30" height="30" class="d-inline-block align-middle" alt=""></img>
+            <span>Yal3ab</span>
+          </a>
           
-          <ul className="navbar navbar-nav navbar-right">
-            <li>Score : {oneScore} </li>
-          </ul>
+        
+          <div className="topnav-right">
+            <p>
+              <span>Score : {oneScore} </span>
+            </p>
           </div>
-        </div>
-      </nav>
+        
+        
+        </nav>
+
       {/* The main content with container fluid */}
       <div className="container-fluid  all">
         <div className="row ">
