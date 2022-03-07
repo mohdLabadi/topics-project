@@ -1,60 +1,64 @@
 .all-home {
-  padding: 20px 10px 0 40px;
+    padding: 20px 10px 0 40px;
+  }
+.all-page{
+    background-color: black;
+    height: 100vw;
 }
-.main-content {
-  padding-top: 20vh;
- 
-  background-color: rgb(10,10,10);
-  color: white;
-  border-radius: 60px 60px 0 0;
-}
-.main-text {
-  text-align: center;
-}
-/* The lines */
-.lines {
-  width: 100%;
-  height: 10px;
-
-  display: flex;
-  margin: 0;
-
-  flex-grow: 1;
-}
-.lines .box-sm {
-  flex-grow: 1;
-
-  transition: all 0.5s ease-in-out;
-}
-.black {
-  background-color: blanchedalmond;
-}
-.white {
-  background-color: white;
-}
-.green {
-  background-color: green;
-}
-.red {
-  background-color: red;
-}
-.lines .box-sm:hover {
-  flex-grow: 12;
-}
-/* Choosing which games */
-.games-content {
-  text-align: center;
-  
-  padding-bottom: 30vh;
-  background-color: rgb(10,10,10);
-}
-.games-content .one-game {
-  border-radius: 0px 80px 80px 0;
-    transition: 1s;
+  .main-content {
+    padding-top: 20vh;
     
-}
-.games-content .one-game:hover{
-    letter-spacing: 2px;
-    color: whitesmoke;
-    cursor: pointer;
-}
+    background-color: black;
+    color: white;
+    
+  }
+  .main-text {
+    text-align: center;
+  }
+  /* The lines */
+  .lines {
+    width: 100%;
+    height: 10px;
+  
+    display: flex;
+    margin: 0;
+  
+    flex-grow: 1;
+  }
+  .lines .box-sm {
+    flex-grow: 1;
+  
+    transition: all 0.5s ease-in-out;
+  }
+  .black {
+    background-color: blanchedalmond;
+  }
+  .white {
+    background-color: white;
+  }
+  .green {
+    background-color: green;
+  }
+  .red {
+    background-color: red;
+  }
+  .lines .box-sm:hover {
+    flex-grow: 12;
+  }
+  /* Choosing which games */
+  .games-content {
+    text-align: center;
+    
+    padding-bottom: 30vh;
+    background-color: black;
+  }
+  .games-content .one-game {
+    border-radius: 0px 80px 80px 0;
+      transition: 1s;
+      
+  }
+  .games-content .one-game:hover{
+      letter-spacing: 2px;
+      color: whitesmoke;
+      cursor: pointer;
+  }

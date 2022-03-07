@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
-import './MemoryGame2.css';
+import './MemoryGame.css';
 import SingleCard from "./SingleCard";
 
 const cardImages = [
-   { "src": './img/elephant.png', matched: false },
-   { "src": './img/cat.png', matched: false },
-   { "src": './img/dog.png', matched: false },
-   { "src": './img/goat.png', matched: false },
-   { "src": './img/rabbit.png', matched: false },
-   { "src": './img/horse.png', matched: false },
-   { "src": './img/duck.png', matched:false},
-   { "src": './img/monkey.png', matched:false}
+   { "src": '/img/elephant.png', matched: false },
+   { "src": '/img/cat.png', matched: false },
+   { "src": '/img/dog.png', matched: false },
+   { "src": '/img/goat.png', matched: false },
+   { "src": '/img/rabbit.png', matched: false },
+   { "src": '/img/horse.png', matched: false },
+   { "src": '/img/duck.png', matched:false},
+   { "src": '/img/monkey.png', matched:false}
 ];
 
-function MemoryGame2() {
+function MemoryGame() {
    const [cards, setCards] = useState([]);
    const [turns, setTurns] = useState(0);
    const [choiceOne, setChoiceOne] = useState(null);
@@ -95,4 +95,4 @@ function MemoryGame2() {
    );
 }
 
-export default MemoryGame2;
+export default MemoryGame;

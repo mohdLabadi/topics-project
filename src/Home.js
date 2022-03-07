@@ -2,9 +2,9 @@ import "./Home.css";
 
 function HomePage() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid all-page">
       <div className="row d-flex justify-content-center main-content">
-        <div className="col-sm-6 main-text align-self-center">
+        <div className="col-sm-12 main-text align-self-center">
           <h1>Come and Play Games</h1>
           <p>
             See our two collection of games that Muhamamd Mushoffa and Llabadi.

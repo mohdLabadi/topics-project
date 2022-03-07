@@ -1,10 +1,9 @@
-
 .App {
     max-width: 860px;
     margin: 40px auto;
  }
  button {
-    background: purple;
+    background: none;
     border: 2px solid white;
     padding: 6px 12px;
     border-radius: 4px;
@@ -14,7 +13,7 @@
     font-size: 1em;
  }
  button:hover {
-    background: rgb(40, 0, 58);
+    background: purple;
     color: white;
  }
  .card-grid {
@@ -30,5 +29,3 @@
     font-family: sans-serif;  
  }
 
-
- 
