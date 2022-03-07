@@ -1,24 +1,41 @@
 import "./Hangman.css";
-function Hangman({
-  first,
+import { useState } from "react";
+function Hangman() {
+  const [score, setScore] = useState(500);
 
-  changeFirst,
+  const [word, setWord] = useState("SIMPLE");
 
-  scoreOne,
-}) {
+  const[letter,setLetter] = useState(['_','_','_','_','_','_',]);
+ 
+  
+
   return (
-    <div className="hangman">
-      <h1>Hangman game</h1>
-      <h1>{first}</h1>
-
-      <button
-        onClick={() => {
-          scoreOne += 100;
-          changeFirst(scoreOne);
-        }}
-      >
-        Change First Player
-      </button>
+    <div className="container-fluid hangman">
+      <div className="row">
+        <div className="col-sm-12">
+          <h1>Points Deducted: {score} </h1>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-2">
+          <h1>{letter[0]}</h1>
+        </div>
+        <div className="col-sm-2">
+          <h1>{letter[1]}</h1>
+        </div>
+        <div className="col-sm-2">
+          <h1>{letter[2]}</h1>
+        </div>
+        <div className="col-sm-2">
+          <h1>{letter[3]}</h1>
+        </div>
+        <div className="col-sm-2">
+          <h1>{letter[4]}</h1>
+        </div>
+        <div className="col-sm-2">
+          <h1>{letter[5]}</h1>
+        </div>
+      </div>
     </div>
   );
 }
