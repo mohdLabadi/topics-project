@@ -33,13 +33,13 @@
   background-color: blanchedalmond;
 }
 .white {
-  background-color: white;
+  background-color: yellow;
 }
 .green {
   background-color: green;
 }
 .red {
-  background-color: red;
+  background-color: orange;
 }
 .lines .box-sm:hover {
   flex-grow: 12;
