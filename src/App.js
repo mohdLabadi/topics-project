@@ -11,15 +11,28 @@ function App() {
         <div class="container-fluid">
           <div class="navbar-header">
             {/* Put Logo somewhere here */}
-            <h4>Yal3Ab</h4>
+             <h4> <a class="navbar-brand" href="/">
+      
+            <img src="/img/Yal3ab.png" class="img-fluid logo-image"></img>
+      
+</a></h4>
           </div>
+         
           <ul class="nav navbar-nav">
             <li>
-              <h5>Score= 0</h5>
+              <div class="score">
+                <h5>Score =  0</h5>
+              </div>
             </li>
           </ul>
         </div>
       </nav>
+      <div className="lines">
+              <div className="box-sm black"></div>
+              <div className="box-sm white"></div>
+              <div className="box-sm green"></div>
+              <div className="box-sm red"></div>
+          </div>
       <Switch>
         <Route path="/" exact>
           <HomePage />

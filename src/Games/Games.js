@@ -1,6 +1,6 @@
 import "./Games.css";
 import { useState, useEffect } from "react";
-import MemoryGame2 from "./MemoryGame2";
+import MemoryGame from "./MemoryGame";
 import Hangman from "./Hangman";
 import { FaHome, FaGamepad, FaHeadset } from "react-icons/fa";
 import { useParams } from "react-router-dom";
@@ -65,11 +65,11 @@ function Games() {
     );
   } else if (display == "memory-game") {
     game = (
-      <MemoryGame2
+      <MemoryGame
         fscoreOne={oneScore}
         changeFirst={setOneScore}
         first={firstName}
-      ></MemoryGame2>
+      ></MemoryGame>
     );
   }
 
