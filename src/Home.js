@@ -2,7 +2,7 @@ import "./Home.css";
 
 function HomePage() {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row d-flex justify-content-center main-content">
         <div className="col-sm-6 main-text align-self-center">
           <h1>Come and Play Games</h1>

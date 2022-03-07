@@ -4,7 +4,7 @@
     margin: 40px auto;
  }
  button {
-    background: none;
+    background: purple;
     border: 2px solid white;
     padding: 6px 12px;
     border-radius: 4px;
@@ -14,7 +14,7 @@
     font-size: 1em;
  }
  button:hover {
-    background: purple;
+    background: rgb(40, 0, 58);
     color: white;
  }
  .card-grid {
