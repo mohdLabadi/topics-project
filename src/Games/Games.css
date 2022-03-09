@@ -1,5 +1,5 @@
 html{
-    background-color:bisque ;
+    background-color:rgb(35,35,35) ;
     margin: 0;
     padding: 0;
   }
@@ -13,11 +13,11 @@ html{
   }
   .all{
     width: 100vw;
-    background-color: #ECB390;
+    background-color: rgb(35,35,35);
     margin: 0;
     padding: 0;
     color: white;
-    background-color: #ECB390
+    background-color: rgb(35,35,35);
   }
   
   .navbar{
@@ -34,7 +34,7 @@ html{
   
   .icon{
     border-radius: 0px 20px 20px 0;
-    background-color: #DD4A48;
+    background-color: purple;
     color: white;
     padding: 16px;
     margin-top: 20px;
@@ -89,8 +89,8 @@ html{
   }
   .icon .all-games p:hover{
     color:  azure;
-    text-shadow: #DD4A48;
-    background-color: #ECB390;
+    text-shadow: blue;
+    background-color: blue;
    
     text-shadow: 4px 4px 0px rgba(163, 163, 163, 0.36);
   }

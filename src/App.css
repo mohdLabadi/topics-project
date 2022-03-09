@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-
-
-
 /* The navigation bar */
 .navbar-header{
   padding-left: 10px;
@@ -16,9 +13,6 @@
 }
 
 .lines {
-  width: 70%;
-  height: 15px;
-
   display: flex;
   margin: 0;
 
@@ -29,20 +23,25 @@
 
   transition: all 0.5s ease-in-out;
 }
-.black {
-  background-color: blanchedalmond;
+
+.lime {
+  background-color: pink;
 }
-.white {
-  background-color: yellow;
+
+.orange {
+  background-color: orchid;
 }
+
 .green {
   background-color: green;
 }
-.red {
-  background-color: orange;
+
+.yellow {
+  background-color: greenyellow;
 }
+
 .lines .box-sm:hover {
-  flex-grow: 12;
+  flex-grow: 10;
 }
 
 .logo-image{
@@ -61,4 +60,9 @@ h5{
   background-color: rgb(30,30,30);
   padding: 25px;
   border-radius: 10px;
+}
+
+li{
+  display: inline-block;
+  margin: 15px;
 }

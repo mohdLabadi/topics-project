@@ -103,7 +103,7 @@ function Games() {
           }}
         >
           <div className="text">
-            <h5> Games</h5>
+            <h5> &nbsp; Games</h5>
             <FaGamepad size={30} className="ic" id="game"></FaGamepad>
           </div>
           {allgames}
