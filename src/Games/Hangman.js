@@ -6,8 +6,7 @@ function Hangman() {
   const [feedback, setFeedBack] = useState();
   const [allGuessed, setAllGuesssed] = useState(['A','D']);
   const [word, setWord] = useState("SIMPLE");
-
-  const [letter, setLetter] = useState(["_", "_", "_", "_", "_", "_"]);
+  const [letter, setLetter] = useState(["-", "-", "-", "-", "-", "-"]);
 
   function toClick() {
     let appearance = [];
@@ -43,7 +42,8 @@ function Hangman() {
           <hr />
         </div>
       </div>
-      <div className="row letters">
+      
+      <div className="row letters-container">
         <div className="col-sm-2">
           <h1>{letter[0]}</h1>
         </div>

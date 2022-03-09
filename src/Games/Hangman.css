@@ -12,13 +12,17 @@
 .score-hangman h1{
     text-align: center;
 }
-.letters{
+.letters-container{
     text-align: center;
     border-bottom: 2px black;
-    margin-bottom: 40px;
+    margin-bottom:50px;
+    margin-right:10%;
+    margin-left:10%;
     background-color: purple;
     padding:20px;
     border-radius:20px;
+    width:auto;
+   
 
 }
 .input-guess{
