@@ -3,15 +3,85 @@ import { useState } from "react";
 function HomePage() {
   const [Display, setDisplay] = useState();
   let moreInfo;
+  const [name, setName] = useState("");
 
-  function changeHangman(){
+  function changeHangman() {
     setDisplay("hangman");
   }
-  // if(Display == "hangman"){
-  //   moreInfo = (
-
-  //   )
-  // }
+  function changeMemoryGame() {
+    setDisplay("memory-game");
+  }
+  if (Display == "hangman") {
+    moreInfo = (
+      <div className="row hangman-information">
+        <div className="game-title">
+          <h1>HANGMAN</h1>
+        </div>
+        <div className="col-sm-6">
+          <p>
+            {" "}
+            This is a simple hangman game, where you guess the word and if it is
+            right, you get deducted points, and guess correctly, gain points.
+          </p>
+        </div>
+        <div className="col-sm-6 image">
+          <img
+            src="https://media.istockphoto.com/photos/wooden-block-with-the-number-401k-with-some-money-around-concept-in-picture-id1304783217?b=1&k=20&m=1304783217&s=170667a&w=0&h=Ztu3NJzQJF-lq45TYQzwawlhbaOgwR7UR4YZqs6y3kE="
+            alt="hangman picture"
+          />
+        </div>
+        <span>
+          <label>Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          ></input>
+        </span>
+        <hr className="divider" />
+        <button classsName="row">Play</button>
+      </div>
+    );
+  } else if (Display == "memory-game") {
+    moreInfo = (
+      <div className="row memoryGame-information">
+        <div className="game-title">
+          <h1>Memory Game</h1>
+        </div>
+        <div className="col-sm-6">
+          <p>
+            {" "}
+            This is a simple memorygame, where you have to flip 2 cards a time
+            to match the pictures that have the same animal picture on them.
+            This game enhances the memory of the player because it helps them
+            rememebr the places of the images of the animals that the player
+            needs to find a pair for. points.
+          </p>
+        </div>
+        <div className="col-sm-6 image">
+          <img
+            className="image"
+            src="./img/memory-game-icon.png"
+            alt="memory game picture"
+          />
+        </div>
+        <span>
+          <label>Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          ></input>
+        </span>
+        <hr className="divider" />
+        <button classsName="row" >Play</button>
+      </div>
+    );
+  }
   return (
     <div className="container-fluid all-page">
       <div className="row d-flex justify-content-center main-content">
@@ -31,40 +101,18 @@ function HomePage() {
       </div>
       {/* games selection  */}
       <div className="row d-flex justify-content-center games-content">
-        <div className="col-sm-6 one-game">
+        <div onClick={changeHangman} className="col-sm-6 one-game">
           <h1>Hangman</h1>
         </div>
-        <div className="col-sm-6 one-game">
+        <div onClick={changeMemoryGame} className="col-sm-6 one-game">
           <h1>Memory Card</h1>
         </div>
       </div>
 
       <hr className="divider" />
       {/* Type of game */}
-
-      <div className="hangman-info">
-        <div className="main-text">
-         <h1>
-           HANGMAN
-         </h1>
-        </div>
-        <div className="row information">
-          <div className="col-sm-6 info">
-            <h3>
-              {" "}
-              This is a simple hangman game, where you guess the word and if it
-              is right, you get deducted points, and guess correctly, gain
-              points.
-            </h3>
-          </div>
-          <div className="col-sm-6 image">
-            <img
-              src="https://media.istockphoto.com/photos/wooden-block-with-the-number-401k-with-some-money-around-concept-in-picture-id1304783217?b=1&k=20&m=1304783217&s=170667a&w=0&h=Ztu3NJzQJF-lq45TYQzwawlhbaOgwR7UR4YZqs6y3kE="
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
+      {moreInfo}
+      <hr className="divider" />
     </div>
   );
 }

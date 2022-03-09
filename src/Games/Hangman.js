@@ -1,12 +1,27 @@
 import "./Hangman.css";
 import { useState } from "react";
+
+
 function Hangman() {
+  
   const [score, setScore] = useState(0);
   const [guess, setGuess] = useState();
   const [feedback, setFeedBack] = useState();
-  const [allGuessed, setAllGuesssed] = useState(['A','D']);
+  const [allGuessed, setAllGuesssed] = useState([]);
   const [word, setWord] = useState("SIMPLE");
   const [letter, setLetter] = useState(["-", "-", "-", "-", "-", "-"]);
+  
+  const handleSubmit = e => {
+    e.preventDefault();
+    toClick();
+  };
+
+  const handleKeypress = e => {
+    //it triggers by pressing the enter key
+  if (e.keyCode === 13) {
+    handleSubmit();
+  }
+  };
 
   function toClick() {
     let appearance = [];
@@ -31,8 +46,13 @@ function Hangman() {
       allGuessed.push(guess);
       setGuess("")
       console.log(allGuessed);
-    }
-  }
+    }    
+    
+
+    
+}
+
+
 
   return (
     <div className="container-fluid hangman">
@@ -64,6 +84,7 @@ function Hangman() {
         </div>
       </div>
       <div className="row d-flex justify-content-center  ">
+        
         <input
           className="col-sm-1 input-guess"
           type="text"
@@ -71,13 +92,16 @@ function Hangman() {
             setGuess(e.target.value.toUpperCase());
           }}
           value={guess}
+
+          onKeyPress={handleKeypress}
+
           maxLength="1"
         />
       </div>
       <div className="row d-flex justify-content-center submitting">
-        <h3 onClick={toClick} className="col-sm-2 input-submit">
+        <button onClick={toClick}  type="submit" className="col-sm-2 input-submit">
           Guess
-        </h3>
+        </button>
       </div>
       <div className="row d-flex justify-content-center feedback">
         <h3 className="col-sm-5">{feedback}</h3>

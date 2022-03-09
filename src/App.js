@@ -19,19 +19,23 @@ function App() {
             </a></h4>
           </div>
          
-          <ul className="nav nav-navbar">
+          <ul className="nav navbar-nav">
 
-            <div className="Info-Container">
+            <div>
 
-            <li className="elem">
+            <li>
+              <div class="score">
               <h5>Score =  0</h5>
+              </div>
             </li>
 
-            <li className="elem">
+            <li>
+              <div class="score">
               <h5>Player: Name</h5>
+              </div>
             </li>
-            
             </div>
+
           </ul>
         </div>
       </nav>
