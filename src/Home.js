@@ -19,11 +19,11 @@ function HomePage() {
         </div>
       </div>
       <div className="row d-flex justify-content-center games-content">
-        <div className="col-sm-6 one-game">
+        <div className="col-sm-6 one-game " >
             <h1>Hangman</h1>
         </div>
-        <div className="col-sm-6 one-game">
-            <h1>Memory Card</h1>
+        <div className="col-sm-6 one-game ">
+            <h1>Memory Game</h1>
         </div>
        
       </div>

@@ -2,13 +2,13 @@
     padding: 20px 10px 0 40px;
   }
 .all-page{
-    background-color: black;
+    background-color: rgb(35,35,35);
     height: 100vw;
 }
   .main-content {
     padding-top: 20vh;
     
-    background-color: black;
+    background-color: rgb(35,35,35);
     color: white;
     
   }
@@ -24,6 +24,7 @@
     margin: 0;
   
     flex-grow: 1;
+    
   }
   .lines .box-sm {
     flex-grow: 1;
@@ -50,7 +51,7 @@
     text-align: center;
     
     padding-bottom: 30vh;
-    background-color: black;
+    background-color: rgb(30,30,30);
   }
   .games-content .one-game {
     border-radius: 0px 80px 80px 0;
@@ -61,4 +62,8 @@
       letter-spacing: 2px;
       color: whitesmoke;
       cursor: pointer;
+  }
+
+  .one-game{
+    padding-top: 50px;
   }

@@ -39,7 +39,7 @@ function Hangman() {
     <div className="container-fluid hangman">
       <div className="row">
         <div className="col-sm-12 score-hangman">
-          <h1>Total Points: {score} </h1>
+          <h1 className="comp">Total Points: {score} </h1>
           <hr />
         </div>
       </div>

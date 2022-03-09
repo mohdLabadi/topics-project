@@ -19,19 +19,31 @@ function App() {
           </div>
          
           <ul class="nav navbar-nav">
+            
+            <div>
             <li>
               <div class="score">
                 <h5>Score =  0</h5>
               </div>
             </li>
+
+            <li>
+
+              <div class="score">
+                <h5>Player: Name</h5>
+              </div>
+            </li>
+            </div>
+
           </ul>
         </div>
       </nav>
       <div className="lines">
-              <div className="box-sm black"></div>
-              <div className="box-sm white"></div>
+              <div className="box-sm orange"></div>
               <div className="box-sm green"></div>
-              <div className="box-sm red"></div>
+              <div className="box-sm yellow"></div>
+              <div className="box-sm lime"></div>
+             
           </div>
       <Switch>
         <Route path="/" exact>
