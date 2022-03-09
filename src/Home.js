@@ -2,6 +2,16 @@ import "./Home.css";
 import { useState } from "react";
 function HomePage() {
   const [Display, setDisplay] = useState();
+  let moreInfo;
+
+  function changeHangman(){
+    setDisplay("hangman");
+  }
+  // if(Display == "hangman"){
+  //   moreInfo = (
+
+  //   )
+  // }
   return (
     <div className="container-fluid all-page">
       <div className="row d-flex justify-content-center main-content">
