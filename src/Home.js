@@ -1,5 +1,6 @@
 import "./Home.css";
 import { useState, useContext } from 'react';
+import { useHistory } from "react-router-dom";
 import {currentUserInfo} from './App';
 function HomePage() {
   const [Display, setDisplay] = useState();
@@ -11,6 +12,13 @@ function HomePage() {
   }
   function changeMemoryGame() {
     setDisplay("memory-game");
+  }
+  const {setUserName} =useContext(currentUserInfo);
+  const history = useHistory();
+  function redirecting(){
+    setUserName(name);
+    history.push(`/game/${Display}`);
+
   }
   if (Display == "hangman") {
     moreInfo = (
@@ -34,6 +42,7 @@ function HomePage() {
         <span>
           <label>Name:</label>
           <input
+            maxLength={5}
             type="text"
             value={name}
             onChange={(e) => {
@@ -42,7 +51,7 @@ function HomePage() {
           ></input>
         </span>
         <hr className="divider" />
-        <button classsName="row">Play</button>
+        <button onClick={redirecting} classsName="row">Play</button>
       </div>
     );
   } else if (Display == "memory-game") {
@@ -71,6 +80,7 @@ function HomePage() {
         <span>
           <label>Name:</label>
           <input
+          maxLength={5}
             type="text"
             value={name}
             onChange={(e) => {
@@ -79,7 +89,7 @@ function HomePage() {
           ></input>
         </span>
         <hr className="divider" />
-        <button classsName="row" >Play</button>
+        <button onClick={redirecting} classsName="row" >Play</button>
       </div>
     );
   }
