@@ -1,1 +1,6 @@
-This is to the only retarded llabadi to read, 
+Start by using
+npm install 
+
+then 
+npm start
+
