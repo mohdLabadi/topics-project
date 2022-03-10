@@ -2,7 +2,7 @@ import "./Games.css";
 import { useState, useEffect } from "react";
 import MemoryGame from "./MemoryGame";
 import Hangman from "./Hangman";
-import { FaHome, FaGamepad, FaHeadset } from "react-icons/fa";
+import { FaGamepad, FaHeadset } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 
 

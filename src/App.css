@@ -45,8 +45,8 @@
 }
 
 .logo-image{
-  width: 140px;
-  height: 100px;
+  width: 20%;
+  height: 20%;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -57,12 +57,16 @@ h5{
 }
 
 .score{
-  background-color: rgb(30,30,30);
-  padding: 25px;
-  border-radius: 10px;
+  background-color: rgb(35,35,35);
+  padding:10%;
+  border-radius:9px;
+  
+}
+li{
+  display:inline-block;
+  margin: 15px;
+  padding:10px;
+  border-radius: 15px;
+  white-space:nowrap;
 }
 
-li{
-  display: inline-block;
-  margin: 15px;
-}

@@ -2,14 +2,26 @@ import "./Hangman.css";
 import { useState, useContext } from "react";
 import {currentUserInfo} from "../App";
 function Hangman() {
+  
   const [score, setScore] = useState(0);
   const [guess, setGuess] = useState();
   const [feedback, setFeedBack] = useState();
-  const [allGuessed, setAllGuesssed] = useState(['A','D']);
+  const [allGuessed, setAllGuesssed] = useState([]);
   const [word, setWord] = useState("SIMPLE");
-
-  const [letter, setLetter] = useState(["_", "_", "_", "_", "_", "_"]);
+  const [letter, setLetter] = useState(["-", "-", "-", "-", "-", "-"]);
+  
+  const handleSubmit = e => {
+    e.preventDefault();
+    toClick();
+  };
   const value = useContext(currentUserInfo)
+  const handleKeypress = e => {
+    //it triggers by pressing the enter key
+  if (e.keyCode === 13) {
+    handleSubmit();
+  }
+  };
+
   function toClick() {
     let appearance = [];
     if (word.includes(guess)) {
@@ -39,8 +51,13 @@ function Hangman() {
       allGuessed.push(guess);
       setGuess("")
       console.log(allGuessed);
-    }
-  }
+    }    
+    
+
+    
+}
+
+
 
   return (
     <div className="container-fluid hangman">
@@ -50,7 +67,8 @@ function Hangman() {
           <hr />
         </div>
       </div>
-      <div className="row letters">
+      
+      <div className="row letters-container">
         <div className="col-sm-2">
           <h1>{letter[0]}</h1>
         </div>
@@ -71,6 +89,7 @@ function Hangman() {
         </div>
       </div>
       <div className="row d-flex justify-content-center  ">
+        
         <input
           className="col-sm-1 input-guess"
           type="text"
@@ -78,13 +97,16 @@ function Hangman() {
             setGuess(e.target.value.toUpperCase());
           }}
           value={guess}
+
+          onKeyPress={handleKeypress}
+
           maxLength="1"
         />
       </div>
       <div className="row d-flex justify-content-center submitting">
-        <h3 onClick={toClick} className="col-sm-2 input-submit">
+        <button onClick={toClick}  type="submit" className="col-sm-2 input-submit">
           Guess
-        </h3>
+        </button>
       </div>
       <div className="row d-flex justify-content-center feedback">
         <h3 className="col-sm-5">{feedback}</h3>
