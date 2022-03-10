@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { currentUserInfo } from '../App';
 import './MemoryGame.css';
 import SingleCard from "./SingleCard";
 
@@ -20,6 +21,8 @@ function MemoryGame() {
    const [choiceTwo, setChoiceTwo] = useState(null);
    const [disabled, setDisabled] = useState(false);
 
+   const {useScore, setUserScore} = useContext(currentUserInfo)
+
    // shuffle cards
    const shuffleCard = () => {
       const shuffledCards = [...cardImages, ...cardImages]
@@ -39,6 +42,9 @@ function MemoryGame() {
 
    // to reset the turns and card choice
    const resetTurn = () => {
+      let x = useScore; 
+      x-=10;
+      setUserScore(x);
       setChoiceOne(null);
       setChoiceTwo(null);
       setTurns((prev) => prev + 1);
@@ -52,8 +58,12 @@ function MemoryGame() {
             setCards((prevCards) => {
                return prevCards.map((card) => {
                   if (card.src === choiceOne.src) {
+                     let x = useScore; 
+                     x+=50;
+                     setUserScore(x);
                      return { ...card, matched: true };
                   } else {
+                    
                      return card;
                   }
                });

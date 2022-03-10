@@ -1,17 +1,21 @@
 import "./Home.css";
-import { useState } from "react";
+import { useState, useContext } from 'react';
+import {currentUserInfo} from './App';
 function HomePage() {
   const [Display, setDisplay] = useState();
   let moreInfo;
+  const [name, setName] = useState();
+  const value = useContext(currentUserInfo);
 
-  function changeHangman(){
+  
+  function changeHangman() {
     setDisplay("hangman");
-  }
-  // if(Display == "hangman"){
-  //   moreInfo = (
+  };
+  const submitName = () => {
+    value.setUserName(name);
+    console.log(value.userName);
 
-  //   )
-  // }
+  }
   return (
     <div className="container-fluid all-page">
       <div className="row d-flex justify-content-center main-content">
@@ -44,9 +48,7 @@ function HomePage() {
 
       <div className="hangman-info">
         <div className="main-text">
-         <h1>
-           HANGMAN
-         </h1>
+          <h1>HANGMAN</h1>
         </div>
         <div className="row information">
           <div className="col-sm-6 info">
@@ -64,6 +66,19 @@ function HomePage() {
             />
           </div>
         </div>
+      </div>
+
+      <div className="info-name">
+        <input
+        
+          type="text"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
+          
+        />
+        <button onClick={submitName}>Something</button>
       </div>
     </div>
   );

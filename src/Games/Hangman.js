@@ -1,5 +1,6 @@
 import "./Hangman.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import {currentUserInfo} from "../App";
 function Hangman() {
   const [score, setScore] = useState(0);
   const [guess, setGuess] = useState();
@@ -8,7 +9,7 @@ function Hangman() {
   const [word, setWord] = useState("SIMPLE");
 
   const [letter, setLetter] = useState(["_", "_", "_", "_", "_", "_"]);
-
+  const value = useContext(currentUserInfo)
   function toClick() {
     let appearance = [];
     if (word.includes(guess)) {
@@ -24,11 +25,17 @@ function Hangman() {
       }
       setFeedBack("Correct +50");
       setLetter(arrx);
+      let x = value.useScore; 
+      x+=50;
+      console.log(x);
+      value.setUserScore(x)
       setGuess("");
       
       
     } else {
+      
       setFeedBack("Wrong -50");
+      value.setUserScore(value.useScore-50)
       allGuessed.push(guess);
       setGuess("")
       console.log(allGuessed);
